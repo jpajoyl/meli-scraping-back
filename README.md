@@ -94,3 +94,6 @@ El servidor se ejecutará por defecto en `http://localhost:8000/`.
     ```bash
     deactivate
     ```
+
+    - **Postman**
+      - el archivo lambda login.postman_collection.json se puede importar en postman para ver los endpoint de la aplicación
