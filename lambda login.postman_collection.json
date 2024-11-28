@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "351376f2-bd05-4b19-8f27-55fa088a44bd",
+		"name": "lambda login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11347171"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"usuario1\",\r\n  \"email\": \"usuario1@example.com\",\r\n  \"password\": \"contraseña123\",\r\n  \"name\": \"Juan\",\r\n  \"last_name\": \"Pérez\",\r\n  \"phone\": \"123456789\",\r\n  \"gender\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyNjU1ODQ5LCJpYXQiOjE3MzI2NTU1NDksImp0aSI6ImQwYzNjZGFkN2MxZjQ2NjhhZDgyNDg5YTQ5N2VlNDEyIiwidXNlcl9pZCI6Mn0.HlMmubsuMMnmu9UKBpHyiH_76s1wn6uDIeSwAZvz7LE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyNjU2MjkzLCJpYXQiOjE3MzI2NTU5OTMsImp0aSI6IjUyOWMzYjkxZDVjYzQ4ZjBiMTAyYTRkYzJiYjg3NDFiIiwidXNlcl9pZCI6Mn0.FBXs04STXO2AGJipfnooc0AanG1z1xtPBOkNm7A2Ffk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"test\",\r\n    \"email\": \"hola@gmail.com\",\r\n    \"name\": \"juan\",\r\n    \"last_name\": \"lopez\",\r\n    \"phone\": \"1234\",\r\n    \"gender\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disableUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyNjU2MjkzLCJpYXQiOjE3MzI2NTU5OTMsImp0aSI6IjUyOWMzYjkxZDVjYzQ4ZjBiMTAyYTRkYzJiYjg3NDFiIiwidXNlcl9pZCI6Mn0.FBXs04STXO2AGJipfnooc0AanG1z1xtPBOkNm7A2Ffk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/1/disable/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"1",
+						"disable",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search/?query=iphone",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "iphone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add wishlist",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMyNzczMzkzLCJpYXQiOjE3MzI3NjI1OTMsImp0aSI6IjdiYWYxYjI1YzgxNzQ3YTg4MTk2N2Y3NWM5ZWUwMTkxIiwidXNlcl9pZCI6OX0.2SROJERzUDOGRknZFE3ihExkSNxXQILT5Klw_EBkP6E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laptop\",\r\n    \"image\": \"https://image.url\",\r\n    \"price\": 1500.00,\r\n    \"mercado_libre_url\": \"https://mercadolibre.com/item\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/wishlist/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"wishlist",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWishlist",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
