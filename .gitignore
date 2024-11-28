@@ -1,0 +1,110 @@
+# General
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales de Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Archivos de configuración de IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs y bases de datos locales
+*.log
+*.sqlite3
+
+# Archivos de paquetes
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+__pycache__/
+
+# Archivos de migración de Django
+
+# Claves y certificados
+*.pem
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+/build
+/.next
+.next/
+
+# React build output
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Archivos de producción de Django
+staticfiles/
+media/
+
+# Entornos virtuales creados por pipenv o poetry
+Pipfile.lock
+poetry.lock
+
+# Configuración de Docker (si aplicable)
+docker-compose.override.yml
+
+# Otros
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Windows
+*.db
+*.pdb
+*.mdb
+*.pid
+*.seed
+*.pid.lock
+
+# MacOS
+*.DS_Store
+
+# Linux
+*~
+
+# Anaconda
+.conda/
+
+# Pytest
+.pytest_cache/
+
+# Jest
+/jest.config.js
+/jest.setup.js
+
+# Storybook
+.storybook/
+
+# Configuración personalizada
+# Agrega aquí cualquier otro archivo o directorio que quieras excluir
